@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+tim:
+  name: Tim Metcalf
+  email: tim@example.com
+  homepage: http://example.com/tim
+  bio: I'm a big guy in a little world
+
+chris:
+  name: Chris Metcalf
+  email: chris@example.com
+  homepage: http://example.com/chris
+  bio: I'm a little guy in a big world 

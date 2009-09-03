@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+mac2009:
+  name: Mackinac 2009
+  description: The 2009 race to Mackinac.
+
+africa:
+  name: South Africa to Grenada
+  description: A big trip from SA to Grenada
+
