@@ -4,7 +4,7 @@ africa_one:
   latitude: -80.54
   longitude: -10.20
   message: Just starting out
-  
+
 africa_two:
   latitude: -20.54
   longitude: 15.20
@@ -13,4 +13,4 @@ africa_two:
 africa_three:
   latitude: 15.24
   longitude: 34.10
-  message: Done. Homeward bound.
+  message: Done. Homeward bountet

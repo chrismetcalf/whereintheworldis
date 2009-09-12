@@ -1,0 +1,13 @@
+<% if @mails.nil? || @mails.size == 0 %>
+  <p>No mail</p>
+<% else %>
+  <ul>
+    <% @mails.each do |mail| %>
+      <li>
+        Subject: <%= mail.subject %><br/>
+        Date: <%= mail.date %><br/>
+        <pre><%= mail.body %></pre>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

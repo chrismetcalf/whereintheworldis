@@ -5,6 +5,9 @@ class CreateTravellers < ActiveRecord::Migration
       t.string :email
       t.string :homepage
       t.text :bio
+      t.string :pop_host
+      t.string :pop_login
+      t.string :pop_password
 
       t.timestamps
     end

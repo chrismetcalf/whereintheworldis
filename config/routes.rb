@@ -38,9 +38,10 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  
-  map.connect 'ping/smtp2web_73dd6ed076562e0d.html', :controller => 'ping', :action => 'index'
-  
+
+  map.resources :traveller
+  map.resources :trip
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

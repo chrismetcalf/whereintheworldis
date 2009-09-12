@@ -1,0 +1,11 @@
+<h1>Trips for <%= @traveller.name %></h1>
+
+<%- if @trips.nil? || @trips.size <= 0 -%>
+  <p>Sorry, no trips for this loser.</p>
+<%- else -%>
+  <ul>
+    <%- @trips.each do |trip| -%>
+      <li><%= link_to trip.name, trip %></li>
+    <%- end -%>
+  </ul>
+<%- end -%>

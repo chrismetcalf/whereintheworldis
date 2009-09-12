@@ -1,102 +1,3 @@
-require 'test_helper'
-require 'action_view/test_case'
-require 'tmail'
-require 'net/pop'
-
-class PingHelperTest < ActionView::TestCase
-  # Subject parsing tests
-  test "north and west" do
-    string = "55.55 N 22.22 W"
-    lat, long = parse_lat_long(string)
-
-    assert_equal(55.55, lat)
-    assert_equal(22.22, long)
-  end
-
-  test "south and east" do
-    string = "55.55 S 22.22 E"
-    lat, long = parse_lat_long(string)
-
-    assert_equal(-55.55, lat)
-    assert_equal(-22.22, long)
-  end
-
-  test "padding " do
-    string = "    55.55   S     22.22    E    "
-    lat, long = parse_lat_long(string)
-
-    assert_equal(-55.55, lat)
-    assert_equal(-22.22, long)
-  end
-
-  test "no space" do
-    string = "55.55S 22.22E"
-    lat, long = parse_lat_long(string)
-
-    assert_equal(-55.55, lat)
-    assert_equal(-22.22, long)
-  end
-
-  test "no decimal" do
-    string = "55 S 22 E"
-    lat, long = parse_lat_long(string)
-
-    assert_equal(-55, lat)
-    assert_equal(-22, long)
-  end
-
-  test "no long" do
-    string = "22 E"
-    lat, long = parse_lat_long(string)
-
-    assert_nil(lat)
-    assert_nil(long)
-  end
-
-  test "no lat" do
-    string = "55 N"
-    lat, long = parse_lat_long(string)
-
-    assert_nil(lat)
-    assert_nil(long)
-  end
-
-  # Message parsing tests
-  test "basic message" do
-    ping = parse_message mail_fixture(BASIC_MESSAGE)
-
-    assert_equal 12.34, ping.latitude
-    assert_equal 56.78, ping.longitude
-    assert_equal "This is my simple message.", ping.message
-  end
-  
-  test "real message" do
-    ping = parse_message mail_fixture(REAL_MESSAGE)
-
-    assert_equal 12.34, ping.latitude
-    assert_equal 56.78, ping.longitude
-    assert_equal "This is my message.", ping.message
-  end
-
-  #####################################
-  # Mail test fixtures
-  #####################################
-  def mail_fixture(name)
-    mail = Net::POPMail.new(nil, nil, nil, nil)
-    mail.stubs(:pop).returns(name)
-    return mail
-  end
-
-  BASIC_MESSAGE = <<MAIL
-From: Chris Metcalf <chris@chrismetcalf.net>
-Date: Thu, 3 Sep 2009 22:27:03 -0700
-Subject: 12.34 N 56.78 W
-To: me34tcalf@timmetcalf.net
-
-This is my simple message.
-MAIL
-
-  REAL_MESSAGE = <<MAIL
 Return-Path: <chrismetcalf@gmail.com>
 X-Original-To: me34tcalf@timmetcalf.net
 Delivered-To: x9681342@friskymail-mx2.g.dreamhost.com
@@ -128,7 +29,7 @@ From: Chris Metcalf <chris@chrismetcalf.net>
 Date: Thu, 3 Sep 2009 22:27:03 -0700
 X-Google-Sender-Auth: 8ee40855ae783867
 Message-ID: <455596e0909032227n42d71a11i3573e77662d2afdc@mail.gmail.com>
-Subject: 12.34 N 56.78 W
+Subject: 
 To: me34tcalf@timmetcalf.net
 Content-Type: multipart/alternative; boundary=000e0cd2dc3238f7ae0472b9c172
 
@@ -158,6 +59,3 @@ This is my message<br>
 <a href="http://awayfind.com/chrismetcalf">http://awayfind.com/chrismetcalf</a><br>
 
 --000e0cd2dc3238f7ae0472b9c172--
-MAIL
-
-end

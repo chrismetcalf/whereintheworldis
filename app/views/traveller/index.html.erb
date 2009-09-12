@@ -1,0 +1,11 @@
+<h1>Travellers</h1>
+
+<%- if @travellers.size > 0 -%>
+  <ul>
+    <%- @travellers.each do |t| -%>
+      <li><%= link_to t.name, t %></li>
+    <%- end -%>
+  </ul>
+<%- else -%>
+  <p>No travellers</p>
+<%- end -%>

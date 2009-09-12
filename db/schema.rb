@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(:version => 20090903042759) do
     t.string   "email"
     t.string   "homepage"
     t.text     "bio"
+    t.string   "pop_host"
+    t.string   "pop_login"
+    t.string   "pop_password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

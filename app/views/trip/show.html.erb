@@ -1,0 +1,8 @@
+<% content_for :header do %>
+  <%= GMap.header %>
+<% end %>
+
+<h1><%= @trip.name %></h1>
+
+<%= @map.to_html %>
+<%= @map.div(:width => 600, :height => 400) %>
