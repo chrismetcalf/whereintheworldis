@@ -1,9 +1,79 @@
 <html>
   <head>
-    <title>Title</title>
+    <title><%= @title.nil? || @title.size <= 0 ? "Where the heck are you?" : @title %> | WhereInTheWorldIs</title>
+    <%= stylesheet_link_tag "style", "screen", "site" %>
     <%= yield :header %>
   </head>
-  <body>
-    <%= yield %>
+
+  <body class="centre janus chrismetcalf">
+    <div id="wrapper">
+      <div id="header">
+        <div id="navigation" class="clearfix">
+          <ul class="primary xoxo">
+            <li><a href="/" rel="home">Home</a></li>
+            <li><a href="/travellers/">Travelers</a></li>
+            <li><a href="/trips/">Trips</a></li>
+          </ul>
+
+          <div class="secondary">
+            <p><a href="/"><%= image_tag "globe-18.png" %>WhereInTheWorldIs</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="content" class="clearfix">
+        <div class="primary">
+          <%= yield %>
+        </div>
+
+        <div id="sidebar" class="secondary">
+
+          <div id="text-174736191" class="widget widget_text">
+            <%#
+              <h3>Shameless Exploitation</h3>
+              <div class="textwidget">
+                <div class="content">
+                  <p>Content</p>
+                </div>
+              </div>
+            %>
+            <%= yield :sidebar %>
+
+          </div>
+        </div>
+      </div> <!-- /main content -->
+
+      <div id="footer" class="clearfix">
+        <div class="secondary">
+          <%#
+            <div id="search-2" class="widget widget_search">
+              <div class="searchbox">
+                <form method="get" id="searchform" action="http://chrismetcalf.net/blog">
+                  <fieldset>
+                    <label for="s" id="searchlabel">Search this site</label>
+                    <input type="text" value="" name="s" id="s" />
+                    <input type="submit" id="searchsubmit" value="Search" />
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          %>
+          <%= yield :footer_secondary %>
+        </div> <!-- /secondary -->
+
+        <div class="primary">
+          <%= render :partial => "shared/about_blurb" %>
+        </div> <!-- /primary -->
+
+        <div id="theme-info" class="clearfix">
+          <div class="secondary">
+            <p>Copyright 2009, Chris Metcalf</p>
+          </div>
+          <div class="primary content">
+          </div> <!-- /theme-info -->
+
+        </div> <!-- /footer -->
+      </div>
+    </div>
   </body>
 </html>

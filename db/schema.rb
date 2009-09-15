@@ -9,10 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090903042759) do
+ActiveRecord::Schema.define(:version => 20090912220304) do
 
   create_table "pings", :force => true do |t|
-    t.datetime "when"
+    t.datetime "when_timestamp"
     t.decimal  "latitude"
     t.decimal  "longitude"
     t.text     "message"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20090903042759) do
   end
 
   create_table "travellers", :force => true do |t|
+    t.string   "login"
     t.string   "name"
     t.string   "email"
     t.string   "homepage"
@@ -33,10 +34,14 @@ ActiveRecord::Schema.define(:version => 20090903042759) do
     t.datetime "updated_at"
   end
 
+  create_table "travellers_trips", :id => false, :force => true do |t|
+    t.integer "traveller_id"
+    t.integer "trip_id"
+  end
+
   create_table "trips", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "traveller_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

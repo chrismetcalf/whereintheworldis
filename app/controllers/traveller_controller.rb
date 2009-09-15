@@ -1,4 +1,6 @@
 class TravellerController < ApplicationController
+  layout "default"
+
   def index
     @travellers = Traveller.find(:all)
   end

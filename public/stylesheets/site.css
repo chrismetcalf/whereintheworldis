@@ -1,0 +1,190 @@
+/*
+chrismetcalf.css
+'Custom style for the Tarski theme - http://tarskitheme.com/
+Designed by Chris Metcalf, http://chrismetcalf.net/
+*/
+
+/* Body 
+----------------------------------------------- */
+body.chrismetcalf #wrapper { 
+	/*border-left: 1px solid #0f6b99; 
+	border-right: 1px solid #0f6b99;*/
+}
+
+/* Navigation
+----------------------------------------------- */
+body.chrismetcalf #navigation {
+	/* background: #1B1F3A; */
+	background: #3B5781;
+	color: #fff;
+	padding-left: 10px;
+	border: 1px solid #ccc;
+}
+
+body.chrismetcalf #navigation a:link, body.chrismetcalf #navigation a:active, body.chrismetcalf #navigation a:visited { 
+	color: #fff; 
+}
+
+body.chrismetcalf #navigation a:hover { 
+	color: #e59900; 
+}
+
+body.chrismetcalf #wrapper .nav-current:link, body.chrismetcalf #wrapper .nav-current:visited, body.chrismetcalf #wrapper .nav-current:active { 
+	color: #e59900; 
+}
+
+body.chrismetcalf #navigation div.secondary {
+	width: 195px;
+	float: left;
+}
+
+/* Content
+----------------------------------------------- */
+body.chrismetcalf { 
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: 76%; 
+	line-height: 120%; 
+	color: #404040; 
+	background: #fff; 
+}
+
+body.chrismetcalf code { 
+	color: #666666; 
+}
+body.chrismetcalf abbr, body.chrismetcalf acronym { 
+	border-bottom: 1px solid #bf8060; 
+}
+
+body.chrismetcalf div.content div.img div.caption {
+  color: #666666; 
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.2em;
+  padding: 3px;
+  text-align: center;
+}
+
+body.chrismetcalf div.content div.img a {
+  border: none;
+}
+
+body.chrismetcalf p.pagination { 
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1.0em;
+}
+
+/* Headers
+--------------------------------------- */
+body.chrismetcalf #blog-title { 
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+}
+
+body.chrismetcalf #tagline { 
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+}
+
+body.chrismetcalf h1, h2, h3, h4, h5, h6, body.chrismetcalf .entry .title { 
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+}
+
+/* Post content
+--------------------------------------- */
+body.chrismetcalf .articlenav { 
+	background: #fcfeff; 
+}
+
+/* Inserts
+--------------------------------------- */
+body.chrismetcalf .insert { 
+	background: #fcfeff; 
+	margin: 0 0 1em 0; 
+	border: 1px solid #cfdde5; 
+	padding: 9px; 
+}
+
+body.chrismetcalf .insert h3 { 
+	border-bottom: 1px solid #cfdde5; 
+}
+		
+/* Downloads
+--------------------------------------- */		
+body.chrismetcalf .content a.download:link, body.chrismetcalf .content a.download:visited, body.chrismetcalf .content a.download:active { 
+	background-color: #fcfeff; 
+	border: 1px solid #cfdde5; 
+}
+
+/* Images
+--------------------------------------- */
+body.chrismetcalf a img { 
+	border: 1px solid #0f6b99; 
+}
+body.chrismetcalf a:hover img, body.chrismetcalf .comment a:hover .avatar { 
+	border: 1px solid #e59900; 
+}
+		
+/* Links
+----------------------------------------------- */
+body.chrismetcalf a:link, body.chrismetcalf a:active, body.chrismetcalf a:visited { color: #0f6b99; }
+body.chrismetcalf a:hover { color: #e59900; }
+
+body.chrismetcalf .content a:link, body.chrismetcalf .content a:active, body.chrismetcalf .content a:visited, body.chrismetcalf .link-pages a:link, body.chrismetcalf .link-pages a:active, body.chrismetcalf .link-pages a:visited, body.chrismetcalf .tagdata a:link, body.chrismetcalf .tagdata a:active, body.chrismetcalf .tagdata a:visited, body.chrismetcalf .widget_tag_cloud a:link, body.chrismetcalf .widget_tag_cloud a:active, body.chrismetcalf .widget_tag_cloud a:visited { border-bottom: 1px solid #cfdde5; }
+body.chrismetcalf .content a:hover, body.chrismetcalf .link-pages a:hover, body.chrismetcalf .tagdata a:hover, body.chrismetcalf .widget_tag_cloud a:hover { border-bottom: 1px solid #e59900; }
+
+/* Widgets
+----------------------------------------------- */
+	
+/* Calendar widget
+------------------------------------------- */
+body.chrismetcalf .widget_calendar tbody td a { color: #fff; background: #8bb6cc; }
+body.chrismetcalf .widget_calendar tbody td a:hover { color: #fff; background: #cca352; }
+
+/* Sociable */
+div.sociable { margin: 16px 0; }
+
+span.sociable_tagline { position: relative; }
+span.sociable_tagline span { display: none; width: 14em; }
+span.sociable_tagline:hover span {
+  position: absolute;
+  display: block;
+  top: -5em;
+  background: #ffe;
+  border: 1px solid #ccc;
+  color: black;
+  line-height: 1.25em;
+}
+.sociable span {
+  display: block;
+}
+.sociable ul {
+  display: inline;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.sociable ul li {
+  background: none;
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 1px;
+}
+.sociable ul li:before { content: ""; }
+.sociable img {
+  float: none;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.sociable-hovers {
+  opacity: .4;
+  -moz-opacity: .4;
+  filter: alpha(opacity=40);
+}
+.sociable-hovers:hover {
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity=100);
+}
+

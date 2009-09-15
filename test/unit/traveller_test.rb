@@ -5,7 +5,7 @@ class TravellerTest < ActiveSupport::TestCase
     tim = travellers(:tim)
     tim.trips.push(trips(:mac2009))
     tim.trips.push(trips(:africa))
-    
+
     assert_equal(2, tim.trips.size)
   end
 end

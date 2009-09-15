@@ -10,4 +10,12 @@ class TripTest < ActiveSupport::TestCase
 
     assert_equal(3, africa.pings.size)
   end
+
+  test "trips can have multiple travellers" do
+    africa = trips(:africa)
+    africa.traveller.push(travellers(:tim))
+    africa.traveller.push(travellers(:chris))
+
+    assert_equal(2, africa.traveller.size)
+  end
 end
