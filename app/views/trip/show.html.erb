@@ -11,6 +11,11 @@
   </ul>
 <% end %>
 
+<% content_for :footer do %>
+  <h3><%= @trip.name %></h3>
+  <p><%= @trip.description %></p>
+<% end %>
+
 <h1><%= @trip.name %></h1>
 
 <p>

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title><%= @title.nil? || @title.size <= 0 ? "Where the heck are you?" : @title %> | WhereInTheWorldIs</title>
+    <title><%= @title.nil? || @title.size <= 0 ? "Where the heck are you?" : @title %> | Where in the World is?</title>
     <%= stylesheet_link_tag "style", "screen", "site" %>
     <%= yield :header %>
   </head>
@@ -10,13 +10,16 @@
       <div id="header">
         <div id="navigation" class="clearfix">
           <ul class="primary xoxo">
-            <li><a href="/" rel="home">Home</a></li>
+            <%#<li><a href="/" rel="home">Home</a></li>
             <li><a href="/travellers/">Travelers</a></li>
-            <li><a href="/trips/">Trips</a></li>
+            <li><a href="/trips/">Trips</a></li>%>
+            <li><a href="#" rel="home">Home</a></li>
+            <li><a href="#">Travelers</a></li>
+            <li><a href="#">Trips</a></li>
           </ul>
 
           <div class="secondary">
-            <p><a href="/"><%= image_tag "globe-18.png" %>WhereInTheWorldIs</a></p>
+            <p><a href="/"><%= image_tag "globe-18.png" %>Where in the World is?</a></p>
           </div>
         </div>
       </div>
@@ -40,7 +43,7 @@
         </div> <!-- /secondary -->
 
         <div class="primary">
-          <%= render :partial => "shared/about_blurb" %>
+          <%= yield :footer %>
         </div> <!-- /primary -->
 
         <div id="theme-info" class="clearfix">
