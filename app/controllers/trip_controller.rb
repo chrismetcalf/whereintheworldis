@@ -19,6 +19,5 @@ class TripController < ApplicationController
     @map.overlay_init(marker)
 
     @map.center_zoom_init([@pings.first.latitude, @pings.first.longitude], 4)
-    @gmap_header = GMap.header
   end
 end
