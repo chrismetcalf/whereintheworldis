@@ -5,8 +5,12 @@
 <% content_for :sidebar do %>
   <h3>Last 5 Updates</h3>
   <ul>
-    <%- @pings[0..5].each do |p| -%>
-      <li><em>At <%= p.when_timestamp %>:</em> <%= p.message %></li>
+    <%- @pings[0..4].reverse.each do |p| -%>
+      <li>
+        <h4><%= time_ago_in_words(p.when_timestamp).capitalize %> ago:</h4>
+        <div class="location"><%= "%.2f" % distance_between(p.latitude, p.longitude, @trip.destination_latitude, @trip.destination_longitude) %> miles left</div>
+        <%= p.message %>
+      </li>
     <%- end -%>
   </ul>
 <% end %>

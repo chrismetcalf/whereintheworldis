@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090912220304) do
+ActiveRecord::Schema.define(:version => 20090922081059) do
 
   create_table "pings", :force => true do |t|
     t.datetime "when_timestamp"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20090912220304) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "destination_latitude"
+    t.decimal  "destination_longitude"
   end
 
 end

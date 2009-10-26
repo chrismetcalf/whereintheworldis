@@ -1,41 +1,35 @@
-/*
-chrismetcalf.css
-'Custom style for the Tarski theme - http://tarskitheme.com/
-Designed by Chris Metcalf, http://chrismetcalf.net/
- */
-
 /* Body 
 ----------------------------------------------- */
-body.chrismetcalf #wrapper { 
+body.whereintheworldis #wrapper { 
 }
 
 /* Navigation
 ----------------------------------------------- */
-body.chrismetcalf #navigation {
+body.whereintheworldis #navigation {
   background: #3B5781;
   color: #fff;
   padding-left: 10px;
   border: 1px solid #ccc;
 }
 
-body.chrismetcalf #navigation a:link, body.chrismetcalf #navigation a:active, body.chrismetcalf #navigation a:visited { 
+body.whereintheworldis #navigation a:link, body.whereintheworldis #navigation a:active, body.whereintheworldis #navigation a:visited { 
   color: #fff; 
 }
 
-body.chrismetcalf #navigation a:hover { 
+body.whereintheworldis #navigation a:hover { 
   color: #e59900; 
 }
 
-body.chrismetcalf #wrapper .nav-current:link, body.chrismetcalf #wrapper .nav-current:visited, body.chrismetcalf #wrapper .nav-current:active { 
+body.whereintheworldis #wrapper .nav-current:link, body.whereintheworldis #wrapper .nav-current:visited, body.whereintheworldis #wrapper .nav-current:active { 
   color: #e59900; 
 }
 
-body.chrismetcalf #navigation div.secondary {
+body.whereintheworldis #navigation div.secondary {
   width: 195px;
   float: left;
 }
 
-body.chrismetcalf #navigation div.secondary img {
+body.whereintheworldis #navigation div.secondary img {
   border: none;
   vertical-align: middle;
   padding-right: 5px;
@@ -43,7 +37,7 @@ body.chrismetcalf #navigation div.secondary img {
 
 /* Content
 ----------------------------------------------- */
-body.chrismetcalf { 
+body.whereintheworldis { 
   font-family: Verdana, Helvetica, Arial, sans-serif; 
   font-size: 76%; 
   line-height: 120%; 
@@ -51,14 +45,14 @@ body.chrismetcalf {
   background: #fff; 
 }
 
-body.chrismetcalf code { 
+body.whereintheworldis code { 
   color: #666666; 
 }
-body.chrismetcalf abbr, body.chrismetcalf acronym { 
+body.whereintheworldis abbr, body.whereintheworldis acronym { 
   border-bottom: 1px solid #bf8060; 
 }
 
-body.chrismetcalf div.content div.img div.caption {
+body.whereintheworldis div.content div.img div.caption {
   color: #666666; 
   font-size: 0.9em;
   font-style: italic;
@@ -67,77 +61,88 @@ body.chrismetcalf div.content div.img div.caption {
   text-align: center;
 }
 
-body.chrismetcalf div.content div.img a {
+body.whereintheworldis div.content div.img a {
   border: none;
 }
 
-body.chrismetcalf p.pagination { 
+body.whereintheworldis p.pagination { 
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-size: 1.0em;
 }
 
+body.whereintheworldis .location {
+  font-style: italic;
+  color: #666666;
+}
+
 /* Headers
 --------------------------------------- */
-body.chrismetcalf #blog-title { 
+body.whereintheworldis #blog-title { 
   font-family: Verdana, Helvetica, Arial, sans-serif; 
 }
 
-body.chrismetcalf #tagline { 
+body.whereintheworldis #tagline { 
   font-family: Verdana, Helvetica, Arial, sans-serif; 
 }
 
-body.chrismetcalf h1, h2, h3, h4, h5, h6, body.chrismetcalf .entry .title { 
+body.whereintheworldis h1, h2, h3, h4, h5, h6, body.whereintheworldis .entry .title { 
+  color: #3B5781;
   font-family: Verdana, Helvetica, Arial, sans-serif; 
+}
+
+body.whereintheworldis h4 {
+  border-bottom: #e5e5e5 1px solid;
+  font-size: 1em;
 }
 
 /* Post content
 --------------------------------------- */
-body.chrismetcalf .articlenav { 
+body.whereintheworldis .articlenav { 
   background: #fcfeff; 
 }
 
 /* Inserts
 --------------------------------------- */
-body.chrismetcalf .insert { 
+body.whereintheworldis .insert { 
   background: #fcfeff; 
   margin: 0 0 1em 0; 
   border: 1px solid #cfdde5; 
   padding: 9px; 
 }
 
-body.chrismetcalf .insert h3 { 
+body.whereintheworldis .insert h3 { 
   border-bottom: 1px solid #cfdde5; 
 }
 
 /* Downloads
 --------------------------------------- */		
-body.chrismetcalf .content a.download:link, body.chrismetcalf .content a.download:visited, body.chrismetcalf .content a.download:active { 
+body.whereintheworldis .content a.download:link, body.whereintheworldis .content a.download:visited, body.whereintheworldis .content a.download:active { 
   background-color: #fcfeff; 
   border: 1px solid #cfdde5; 
 }
 
 /* Images
 --------------------------------------- */
-body.chrismetcalf a img { 
+body.whereintheworldis a img { 
   border: 1px solid #0f6b99; 
 }
-body.chrismetcalf a:hover img, body.chrismetcalf .comment a:hover .avatar { 
+body.whereintheworldis a:hover img, body.whereintheworldis .comment a:hover .avatar { 
   border: 1px solid #e59900; 
 }
 
 /* Links
 ----------------------------------------------- */
-body.chrismetcalf a:link, body.chrismetcalf a:active, body.chrismetcalf a:visited { color: #0f6b99; }
-body.chrismetcalf a:hover { color: #e59900; }
+body.whereintheworldis a:link, body.whereintheworldis a:active, body.whereintheworldis a:visited { color: #0f6b99; }
+body.whereintheworldis a:hover { color: #e59900; }
 
-body.chrismetcalf .content a:link, body.chrismetcalf .content a:active, body.chrismetcalf .content a:visited, body.chrismetcalf .link-pages a:link, body.chrismetcalf .link-pages a:active, body.chrismetcalf .link-pages a:visited, body.chrismetcalf .tagdata a:link, body.chrismetcalf .tagdata a:active, body.chrismetcalf .tagdata a:visited, body.chrismetcalf .widget_tag_cloud a:link, body.chrismetcalf .widget_tag_cloud a:active, body.chrismetcalf .widget_tag_cloud a:visited { border-bottom: 1px solid #cfdde5; }
-body.chrismetcalf .content a:hover, body.chrismetcalf .link-pages a:hover, body.chrismetcalf .tagdata a:hover, body.chrismetcalf .widget_tag_cloud a:hover { border-bottom: 1px solid #e59900; }
+body.whereintheworldis .content a:link, body.whereintheworldis .content a:active, body.whereintheworldis .content a:visited, body.whereintheworldis .link-pages a:link, body.whereintheworldis .link-pages a:active, body.whereintheworldis .link-pages a:visited, body.whereintheworldis .tagdata a:link, body.whereintheworldis .tagdata a:active, body.whereintheworldis .tagdata a:visited, body.whereintheworldis .widget_tag_cloud a:link, body.whereintheworldis .widget_tag_cloud a:active, body.whereintheworldis .widget_tag_cloud a:visited { border-bottom: 1px solid #cfdde5; }
+body.whereintheworldis .content a:hover, body.whereintheworldis .link-pages a:hover, body.whereintheworldis .tagdata a:hover, body.whereintheworldis .widget_tag_cloud a:hover { border-bottom: 1px solid #e59900; }
 
 /* Widgets
 ----------------------------------------------- */
 
 /* Calendar widget
 ------------------------------------------- */
-body.chrismetcalf .widget_calendar tbody td a { color: #fff; background: #8bb6cc; }
-body.chrismetcalf .widget_calendar tbody td a:hover { color: #fff; background: #cca352; }
+body.whereintheworldis .widget_calendar tbody td a { color: #fff; background: #8bb6cc; }
+body.whereintheworldis .widget_calendar tbody td a:hover { color: #fff; background: #cca352; }
 

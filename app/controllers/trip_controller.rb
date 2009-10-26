@@ -9,7 +9,7 @@ class TripController < ApplicationController
     @trip = Trip.find_by_id(params[:id])
     @title = @trip.name
 
-    @pings = @trip.pings.all(:order => :when_timestamp)
+    @pings = @trip.pings.all(:order => "when_timestamp ASC")
 
     @map = GMap.new("map")
     @map.control_init(:large_map => true, :map_type => true)

@@ -4,45 +4,48 @@ require 'tmail'
 require 'net/pop'
 
 class PingHelperTest < ActionView::TestCase
+  FIFTYFIVE = 55 + 55.55/60
+  TWENTYTWO = 22 + 22.22/60
+
   # Subject parsing tests
   test "north and west" do
-    string = "55.55 N 22.22 W"
+    string = "55 55.55 N 22 22.22 W"
     lat, long = parse_lat_long(string)
 
-    assert_equal(55.55, lat)
-    assert_equal(22.22, long)
+    assert_equal(FIFTYFIVE, lat)
+    assert_equal(-TWENTYTWO, long)
   end
 
   test "south and east" do
-    string = "55.55 S 22.22 E"
+    string = "55 55.55 S 22.22 E"
     lat, long = parse_lat_long(string)
 
-    assert_equal(-55.55, lat)
-    assert_equal(-22.22, long)
+    assert_equal(-FIFTYFIVE, lat)
+    assert_equal(TWENTYTWO, long)
   end
 
   test "padding " do
-    string = "    55.55   S     22.22    E    "
+    string = " 55   55.55   S  22   22.22    E    "
     lat, long = parse_lat_long(string)
 
-    assert_equal(-55.55, lat)
-    assert_equal(-22.22, long)
+    assert_equal(-FIFTYFIVE, lat)
+    assert_equal(TWENTYTWO, long)
   end
 
   test "no space" do
-    string = "55.55S 22.22E"
+    string = "55 55.55S 22 22.22E"
     lat, long = parse_lat_long(string)
 
-    assert_equal(-55.55, lat)
-    assert_equal(-22.22, long)
+    assert_equal(-FIFTYFIVE, lat)
+    assert_equal(TWENTYTWO, long)
   end
 
   test "no decimal" do
-    string = "55 S 22 E"
+    string = "55 55 S 22 22 E"
     lat, long = parse_lat_long(string)
 
-    assert_equal(-55, lat)
-    assert_equal(-22, long)
+    assert_equal(-55.0 - 55.0/60.0, lat)
+    assert_equal(22.0 + 22.0/60.0, long)
   end
 
   test "no long" do
